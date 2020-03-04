@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ("../partials/head") %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include ("../partials/header") %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <p>One Click Deploy</p>
+            <button class="btn">Deploy</button>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $('.jumbotron button').on('click', function () {
+                console.log('clicked')
+                $.ajax({
+                    url: 'http://localhost:8080/deploy',
+                    type: 'GET'
+                }).then(result => {
+                    console.log(result);
+                }).fail(err => {
+                    console.log(err);
+                })
+            })
+        })
+    </script>
+
+    <footer>
+        <%- include ("../partials/footer") %>
+    </footer>
+</body>
+
+</html>

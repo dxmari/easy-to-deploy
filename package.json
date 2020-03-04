@@ -1,0 +1,27 @@
+{
+  "name": "easy-to-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
+  },
+  "bin": {
+    "edeploy": "bin/edeploy"
+  },
+  "author": "Mariselvam",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "@types/minimist": "^1.2.0",
+    "@types/shelljs": "^0.8.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.3"
+  }
+}
