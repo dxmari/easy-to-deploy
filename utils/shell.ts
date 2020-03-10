@@ -6,7 +6,7 @@ export default (command: string, timeout = (10 * (60 * 1000))) => {
             resolve("timeout");
         }, timeout);
         let result = shell.exec(command);
-        if (result.code == 0) {
+        if (result.stdout) {
             clearTimeout(t);
             resolve(result.stdout);
         } else {

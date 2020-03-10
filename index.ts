@@ -1,12 +1,10 @@
 import minimist from 'minimist'
 
 import error from './utils/error'
-import net from './src/net'
 import { deploy, version, serve, help } from './cmds'
 
 export const init = () => {
     integrateCmds();
-    // net.connect();
 }
 
 const integrateCmds = () => {
